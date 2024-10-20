@@ -1,0 +1,36 @@
+
+//product-search.scss
+.search-button {
+    color: white;
+    border-radius: 0px;
+}
+
+.searchbox {
+    width: 20rem !important;
+    
+    @media(min-width: 992px) {
+        width: 30rem!important;
+    }
+}
+
+.gold-color {
+  color: #fa6302 !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: var(--bs-secondary-color) !important;
+    cursor: pointer;
+}
+
+.strike-through {
+  text-decoration: line-through !important;
+}
+
+.btn-bg-color {
+    background: #ffd814
+}
+
+
+
+

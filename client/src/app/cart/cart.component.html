@@ -1,0 +1,73 @@
+<div class="container-fluid py-4" style="background: #e3e6e6;">
+    <div class="row d-flex mx-3 justify-content-between">
+        <div class="col col-8">
+            <div class="row">
+                <div class="col p-4" style="background: white;">
+                    <h3>Shopping Cart</h3>
+                    <hr>
+                    <div *ngFor="let item of cart" class="row mb-5">
+                        <div class="col col-3">
+                            <img src="assets/img/{{item.product.images[0]}}" 
+                                style="width: 135px;">
+                        </div>
+                        <div class="col">
+                            <p>
+                                <strong>
+                                <span style="color: rgb(15, 17, 17);">
+                                    {{item.product.description}}
+                                </span>
+                            </strong>
+                            </p>
+                            <div>
+                                <h6>Quantity</h6>
+                                <select class="fw-bold mb-4 d-block px-4 text-center" 
+                                    name="quantity"
+                                    [(ngModel)]="item.quantity"
+                                    (change)="changeItemQuantity(item)"
+                                    style="background: #b2dced;">
+                                    <option *ngFor="let qty of [1, 2, 3, 4, 5]"
+                                        class="text-center">
+                                        {{qty}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a style="color: var(--bs-red) !important;"
+                                    (click)="deleteItem(item)"
+                                >Delete</a>
+                                <a style="color: var(--bs-blue) !important;">Save for later</a>
+                                <a style="color: var(--bs-blue) !important;">Compare</a>
+                                <a style="color: var(--bs-blue) !important;">Share</a>
+                            </div>
+                        </div>
+                        <div class="col col-2">
+                            <h5 class="text-end">
+                                {{item.product.price * item.quantity | currency}}
+                            </h5>
+                        </div>
+                    </div>
+                    <div>
+                        <hr>
+                        <div class="d-flex justify-content-end">
+                            <h4 class="text-end me-2 text-muted d-inline">Subtotal:</h4>
+                            <h4 class="text-end d-inline">{{getSubtotal() | currency}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-4">
+            <div class="p-4" style="background: white;">
+                <div class="d-flex justify-content-between mb-4" style="background: white;">
+                    <h4 class="text-end me-2 text-muted d-inline">Subtotal:</h4>
+                    <span>({{cart.length}} items)</span>
+                    <h4 class="text-end d-inline">{{getSubtotal() | currency}}</h4>
+                </div>
+                <button class="btn btn-bg-color w-100 fw-bold" type="button" 
+                    style="background: #ffd814;"
+                    [routerLink]="['/checkout']"
+                    >Proceed to checkout</button>
+            </div>
+        </div>
+    </div>
+</div>

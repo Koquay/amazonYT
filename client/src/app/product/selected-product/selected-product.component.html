@@ -1,0 +1,76 @@
+<div class="container-fluid p-4">
+    <div class="row d-flex justify-content-between mt-5">
+        <div class="col col-4">
+            <div class="row">
+                <div class="col d-lg-flex justify-content-center col-4">
+                    <ul class="list-unstyled">
+                        <li class="mb-2 p-1"
+                            *ngFor="let img of product.images"
+                            (click)="setCurrentImage(img)"
+                            [ngClass]="{'gallery-product': currentGalleryImg === img }">
+                            <img style="width: 3rem;" src="assets/img/{{img}}">
+                        </li>
+                    </ul>
+                </div>
+                <div class="col col-8">
+                    <img src="assets/img/{{currentGalleryImg}}" style="width: 307px;">
+                </div>
+            </div>
+        </div>
+        <div class="col col-5">
+            <h5 class="text-muted">
+                <strong>
+                <span style="color: rgb(15, 17, 17);">{{product.description}}k</span>
+            </strong>
+            </h5>
+            <small class="d-block mt-2">
+                <span [createRatingStars]="product.rating">
+                    <span></span>
+                </span>
+            </small>
+            <h3 class="my-2 text-muted">{{product.price | currency}}</h3>
+            <div class="table-responsive mt-4" style="height: 12rem;width: 421.7px;">
+                <table class="table table-sm">
+                    <tbody style="font-size: .8rem;">
+                        <tr *ngFor="let attribute of product.attributes">
+                            <td class="fw-bold" style="width: 12rem;">
+                                <strong>{{attribute.label}}</strong>
+                            </td>
+                            <td>
+                                <span style="color: rgb(15, 17, 17);">{{attribute.attribute}}</span>
+                            </td>
+                        </tr>                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-4">
+                <h6 class="fw-bold">About this item:</h6>
+                <ul class="px-3" style="font-size: .9rem;">
+                    <li *ngFor="let spec of product.specifications">
+                        <span style="color: var(--N4QdCheV6mGo,#0f1111);">{{spec}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col col-2 p-2">
+            <div class="p-4" style="border: 0.4px solid var(--bs-gray-500);border-radius: 3%;">
+                <h3 class="mb-4 text-muted">{{product.price | currency}}</h3>
+                <h6>Quantity</h6>
+                <select class="fw-bold mb-4 d-block px-2 text-center" 
+                    name="quantity"
+                    [(ngModel)]="quantity"
+                    style="background: #b2dced;width: 100%;">
+                    <option *ngFor="let qty of [1, 2, 3, 4, 5]"
+                        class="text-center">
+                        {{qty}}
+                    </option>
+                </select>
+                <button class="btn btn-bg-color" type="button" 
+                    (click)="addItemToCart(product)"
+                    style="background: #ffd814;width: 100%;">
+                    Add to cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

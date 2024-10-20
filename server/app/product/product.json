@@ -1,0 +1,86 @@
+
+{
+    "brand": "ASUS",
+    "description": "ASUS ROG Spatha X Wireless Gaming Mouse (Magnetic Charging Stand, 12 Programmable Buttons, 19,000 DPI, Push-fit Hot Swap Switch Sockets, ROG Micro Switches&Paracord and Aura RGB lighting),Black ",
+    "images": [
+      "Screenshot from 2024-10-11 11-13-51.png",
+      "Screenshot from 2024-10-11 11-14-15.png",
+      "Screenshot from 2024-10-11 11-14-30.png",
+      "Screenshot from 2024-10-11 11-14-37.png"
+    ],
+    "price": 110.99,
+    "discount": 10,
+    "rating": 4,
+    "category": "mouse",
+    "attributes": {
+      "Color": "Black",
+      "Connectivity Technology": "USB, Radio Frequency ",
+      "Special Feature":"Rechargeable",
+      "Movement Detection":"Optical"   
+    },
+    "specifications": [
+      "Dual-mode Connectivity - ROG Spatha X Wireless Gaming Mouse allows you play wirelessly with 2.4 GHzRF, or with a wired USB-C cable connection",
+      "Ultimate Accuracy - 19,000 DPI optical sensor provides unmatched accuracy. The DPI On-The-Scroll feature lets you easily adjust the sensitivity of the wireless mouse without accessing software",
+      "Programmable Gaming Mouse - The 12 programmable buttons are positioned within easy reach, all designed to provide intuitive, responsive control",
+      "Durable Switches & Put-fit Switch Sockets - Gold-plated electro-junction, provides a 70-million clicks; Exclusive put-in switch sockets allow you to easily replace switches based on your preference"
+      
+    ]
+  }
+
+  {
+  "_id": {
+    "$oid": "670943161d45394c3f9adbed"
+  },
+  "brand": "ASUS",
+  "description": "ASUS ROG Spatha X Wireless Gaming Mouse (Magnetic Charging Stand, 12 Programmable Buttons, 19,000 DPI, Push-fit Hot Swap Switch Sockets, ROG Micro Switches&Paracord and Aura RGB lighting),Black ",
+  "images": [
+    "Screenshot from 2024-10-11 11-13-51.png",
+    "Screenshot from 2024-10-11 11-14-15.png",
+    "Screenshot from 2024-10-11 11-14-30.png",
+    "Screenshot from 2024-10-11 11-14-37.png"
+  ],
+  "price": 110.99,
+  "discount": 10,
+  "rating": 4,
+  "category": "mouse",
+  "attributes": [
+    { "label":"Color", "attribute": "Black"},
+    { "label":"Connectivity Technology", "attribute": "USB, Radio Frequency"},
+    { "label":"Special Feature", "attribute": "Rechargeable"},
+    { "label":"Movement Detection", "attribute": "Optical"},
+    { "label":"", "attribute": ""},
+    { "label":"", "attribute": ""}
+  ],
+  "specifications": [
+    "Dual-mode Connectivity - ROG Spatha X Wireless Gaming Mouse allows you play wirelessly with 2.4 GHzRF, or with a wired USB-C cable connection",
+    "Ultimate Accuracy - 19,000 DPI optical sensor provides unmatched accuracy. The DPI On-The-Scroll feature lets you easily adjust the sensitivity of the wireless mouse without accessing software",
+    "Programmable Gaming Mouse - The 12 programmable buttons are positioned within easy reach, all designed to provide intuitive, responsive control",
+    "Durable Switches & Put-fit Switch Sockets - Gold-plated electro-junction, provides a 70-million clicks; Exclusive put-in switch sockets allow you to easily replace switches based on your preference"
+  ]
+}
+
+"attributes": {
+    "screenSize": "33.9 Inches ",
+    "resolution": "QHD Wide 1440p ",
+    "aspectRatio": "21:9 ",
+    "screenSurface": "Matte"
+  },
+
+"attributes": [
+    {
+      "label": "Screen size",
+      "attribute": "33.9 Inches"
+    },
+    {
+      "label": "Resolution",
+      "attribute": "QHD Wide 1440p"
+    },
+    {
+      "label": "Aspect Ratio",
+      "attribute": "26:9"
+    },
+    {
+      "label": "Screen surface",
+      "attribute": "Matte"
+    }
+  ],

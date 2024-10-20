@@ -1,0 +1,50 @@
+<div>
+    <section class="mb-5">
+        <h6 class="fw-bold">{{productSidebar.brands.title}}</h6>
+        <ul class="list-unstyled">
+            <li *ngFor="let brand of productSidebar.brands.brands">
+                <input [(ngModel)]="brand.checked" name="brand" 
+                    type="checkbox" class="me-2"
+                    (change)="filterProducts()">
+                <label class="form-label">{{brand.name}}</label>
+            </li>
+        </ul>
+    </section>
+    <section class="mb-5">
+        <h6 class="fw-bold">{{productSidebar.priceRange.title}}</h6>
+        <div>
+            <small>${{productSidebar.priceRange.min}}</small>
+            <small class="mx-2">to</small>
+            <small>${{productSidebar.priceRange.selectedPrice}}</small>
+        </div>
+        <input type="range" data-bs-theme="dark" 
+            min="0" 
+            max="10000" 
+            step="10"
+            (input)="priceChanged($event)"
+        >
+    </section>
+    <section>
+        <div class="row mb-4">
+            <div class="col col-12">
+                <h6 class="fw-bold">
+                    {{productSidebar.ratings.title}}
+                </h6>
+            </div>
+            <div class="col">
+                <div *ngFor="let rating of productSidebar.ratings.ratings" class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="formCheck-11" 
+                        name="rating"
+                        [(ngModel)]="rating.checked"
+                        (change)="filterProducts()"
+                        style="border-width: 3.8px;border-style: solid;">
+                    <label class="form-check-label" for="formCheck-11">
+                        <span [createRatingStars]="rating.rating">
+                            <span></span>
+                        </span>
+                </label>
+            </div>
+            </div>
+        </div>
+    </section>
+</div>

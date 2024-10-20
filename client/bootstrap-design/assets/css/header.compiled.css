@@ -1,0 +1,38 @@
+#authentication {
+  cursor: pointer;
+}
+#authentication li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#authentication li:hover {
+  background: lightgray;
+}
+
+#auth-li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+}
+#auth-li .login-div {
+  display: block;
+  color: white;
+}
+#auth-li .auth-div {
+  display: none !important;
+  background: white;
+  justify-content: center;
+  position: absolute;
+  top: 34px;
+  right: 36px;
+  z-index: 10;
+  color: black;
+  background: white;
+  width: 96px;
+}
+#auth-li:hover .auth-div {
+  display: flex !important;
+}
+#auth-li:hover .login-div {
+  opacity: 0;
+}

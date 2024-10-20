@@ -1,0 +1,145 @@
+<div class="modal fade justify-content-center p-5" id="userSignupModal" tabindex="-1" aria-labelledby="userSignupModal"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form #signupForm="ngForm">
+        <div class="modal-header">
+          <h4 class="modal-title">Sign Up</h4>
+          <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal">
+
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row d-sm-flex mb-2">
+            <div class="col-3">
+              <label class="col-form-label">First Name:</label>
+            </div>
+            <div class="col">
+              <input [(ngModel)]="user.firstName" name="firstName" #firstName="ngModel" required type="text" />
+
+              <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert">
+                <div *ngIf="firstName.hasError('required')">
+                  <small>First Name is required.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row d-sm-flex mb-2">
+            <div class="col-3">
+              <label class="col-form-label">Last Name:</label>
+            </div>
+            <div class="col">
+              <input [(ngModel)]="user.lastName" name="lastName" #lastName="ngModel" required type="text" />
+
+              <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="alert">
+                <div *ngIf="lastName.hasError('required')">
+                  <small>last Name is required.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row d-sm-flex mb-2">
+            <div class="col-3">
+              <label class="col-form-label">Password</label>
+            </div>
+            <div class="col">
+              <input [(ngModel)]="user.password" name="password" #password="ngModel" required type="password" />
+
+              <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert">
+                <div *ngIf="password.hasError('required')">
+                  <small>Password is required.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row d-sm-flex">
+            <div class="col-3">
+              <label class="col-form-label">Email</label>
+            </div>
+            <div class="col">
+              <input [(ngModel)]="user.email" name="email" #email="ngModel" required type="text" />
+
+              <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert">
+                <div *ngIf="email.hasError('required')">
+                  <small>Email is required.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <span class="me-2">Have an account?</span>
+            <a class="fw-bold" style="color: #61a0fd !important" data-bs-toggle="modal"
+              data-bs-target="#userSigninModal">Sign In</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button #closeSignUpModalBtn class="btn btn-light" type="button" data-bs-dismiss="modal">
+            Cancel</button>
+          <button id=signUpBtn class="btn btn-primary" type="button" [disabled]="!signupForm.valid" (click)="signup()">
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade justify-content-center p-5" id="userSigninModal" tabindex="-1" aria-labelledby="userSigninModal"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form #signinForm="ngForm">
+        <div class="modal-header">
+          <h4 class="modal-title">Sign In</h4>
+          <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal">
+
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row d-sm-flex mb-2">
+            <div class="col-3">
+              <label class="col-form-label">Email</label>
+            </div>
+            <div class="col">
+              <input [(ngModel)]="user.email" name="email" #email="ngModel" required type="text" />
+
+              <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert">
+                <div *ngIf="email.hasError('required')">
+                  <small>Email is required.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row d-sm-flex">
+            <div class="col-3">
+              <label class="col-form-label">Password</label>
+            </div>
+            <div class="col">
+              <input [(ngModel)]="user.password" name="password" #password="ngModel" required type="password" />
+
+              <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert">
+                <div *ngIf="password.hasError('required')">
+                  <small>Password is required.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <span class="me-2">Don't have an account?</span>
+            <a class="fw-bold" style="color: #61a0fd !important" data-bs-toggle="modal"
+              data-bs-target="#userSignupModal">Sign Up</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button #closeSignInModalBtn class="btn btn-light" type="button" data-bs-dismiss="modal">
+            Cancel</button>
+          <button class="btn btn-primary" type="button" [disabled]="!signinForm.valid" (click)="signin()">
+            Sign In
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
